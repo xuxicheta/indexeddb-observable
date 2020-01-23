@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "indexeddb-observable": [
+        "dist/indexeddb-observable"
+      ],
+      "indexeddb-observable/*": [
+        "dist/indexeddb-observable/*"
+      ]
+    }
   }
 }

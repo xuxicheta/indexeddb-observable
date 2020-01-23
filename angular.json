@@ -115,6 +115,41 @@
           }
         }
       }
+    },
+    "indexeddb-observable": {
+      "projectType": "library",
+      "root": "projects/indexeddb-observable",
+      "sourceRoot": "projects/indexeddb-observable/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/indexeddb-observable/tsconfig.lib.json",
+            "project": "projects/indexeddb-observable/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/indexeddb-observable/src/test.ts",
+            "tsConfig": "projects/indexeddb-observable/tsconfig.spec.json",
+            "karmaConfig": "projects/indexeddb-observable/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/indexeddb-observable/tsconfig.lib.json",
+              "projects/indexeddb-observable/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "indexeddb-observable-project"
 }
